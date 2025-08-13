@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "DZ Prayer Times",
+  "version": "1.0",
+  "description": "عرض مواقيت الصلاة مع التاريخ الميلادي والهجري للجزائر.",
+  "permissions": [],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}

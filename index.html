@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>مواقيت الصلاة - الجزائر</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="settingsBtn" aria-expanded="false" title="الإعدادات">⚙️</button>
+
+<h1 id="mainTitle">مواقيت الصلاة</h1>
+
+<!-- صندوق الإعدادات -->
+<section id="settingsPanel" aria-hidden="true">
+  <div class="row">
+    <label for="citySelect">اختر الولاية:</label>
+    <select id="citySelect" aria-describedby="cityHelp">
+      <option value="">-- اختر --</option>
+      <option value="adrar">أدرار</option>
+      <option value="chlef">الشلف</option>
+      <option value="laghouat">الأغواط</option>
+      <option value="oum-el-bouaghi">أم البواقي</option>
+      <option value="batna">باتنة</option>
+      <option value="bejaia">بجاية</option>
+      <option value="biskra">بسكرة</option>
+      <option value="bechar">بشار</option>
+      <option value="blida">البليدة</option>
+      <option value="bouira">البويرة</option>
+      <option value="tamanrasset">تمنراست</option>
+      <option value="tebessa">تبسة</option>
+      <option value="tlemcen">تلمسان</option>
+      <option value="tiaret">تيارت</option>
+      <option value="tizi-ouzou">تيزي وزو</option>
+      <option value="algiers">الجزائر العاصمة</option>
+      <option value="djelfa">الجلفة</option>
+      <option value="jijel">جيجل</option>
+      <option value="setif">سطيف</option>
+      <option value="saida">سعيدة</option>
+      <option value="skikda">سكيكدة</option>
+      <option value="sidi-bel-abbes">سيدي بلعباس</option>
+      <option value="annaba">عنابة</option>
+      <option value="guelma">قالمة</option>
+      <option value="constantine">قسنطينة</option>
+      <option value="medea">المدية</option>
+      <option value="mostaganem">مستغانم</option>
+      <option value="msila">المسيلة</option>
+      <option value="mascara">معسكر</option>
+      <option value="ouargla">ورقلة</option>
+      <option value="oran">وهران</option>
+      <option value="el-bayadh">البيض</option>
+      <option value="illizi">إليزي</option>
+      <option value="bordj-bou-arreridj">برج بوعريريج</option>
+      <option value="boumerdes">بومرداس</option>
+      <option value="el-tarf">الطارف</option>
+      <option value="tindouf">تندوف</option>
+      <option value="tissemsilt">تيسمسيلت</option>
+      <option value="el-oued">الوادي</option>
+      <option value="khenchela">خنشلة</option>
+      <option value="souk-ahras">سوق أهراس</option>
+      <option value="tipaza">تيبازة</option>
+      <option value="mila">ميلة</option>
+      <option value="ain-defla">عين الدفلى</option>
+      <option value="naama">النعامة</option>
+      <option value="ain-temouchent">عين تموشنت</option>
+      <option value="ghardaia">غرداية</option>
+      <option value="relizane">غليزان</option>
+      <option value="timimoun">تيميمون</option>
+      <option value="bordj-badji-mokhtar">برج باجي مختار</option>
+      <option value="ouled-djellal">أولاد جلال</option>
+      <option value="beni-abbes">بني عباس</option>
+      <option value="in-salah">عين صالح</option>
+      <option value="in-guezzam">عين قزام</option>
+      <option value="touggourt">تقرت</option>
+      <option value="djanet">جانت</option>
+      <option value="el-mghair">المغير</option>
+      <option value="el-menouar">المنيعة</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label for="backgroundSelect">اختر الخلفية:</label>
+    <select id="backgroundSelect">
+      <option value="1">خلفية 1</option>
+      <option value="2">خلفية 2</option>
+      <option value="3">خلفية 3</option>
+      <option value="4">خلفية 4</option>
+      <option value="5">خلفية 5</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <button id="saveSettingsBtn" class="primary">حفظ الإعدادات</button>
+  </div>
+</section>
+
+<!-- النتائج -->
+<div id="results" role="region" aria-live="polite">
+  <div id="currentTimeBox" aria-hidden="false">
+    <div id="currentTime">--:--:--</div>
+    <div id="dateDisplay">--/--/----</div>
+    <div id="remainingTimeBox"><span id="remainingTime">--:--:--</span></div>
+  </div>
+
+  <table id="prayerTable" aria-label="مواقيت الصلاة"></table>
+
+  <div id="errorMessage" class="error" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
